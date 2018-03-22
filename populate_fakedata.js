@@ -26,8 +26,7 @@ function generate_doc(){
 		i1:  parseInt(string2),
 		user_id :  Math.round(Math.random()* 10000000000),
 		comments: [
-			comment1,get_string_string(2048),get_string_string(2048),get_string_string(2048),get_string_string(2048),get_string_string(2048)
-		],
+			comment1,get_string_string(2048),get_string_string(2048)
 		comment_bin : BinData(0,comment1),
 		friends: [ 
 			parseInt(get_string_int(16)),
