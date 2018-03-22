@@ -105,7 +105,6 @@ function range_queries(db,collection,count,useIndex,useSort){
 
 
 
-
 db=db.getMongo().getDB('samples');
 print("Enabled sharding on samples")
 printjson(db.adminCommand({ enableSharding : 'samples' }))
@@ -121,12 +120,3 @@ print("Populating col2");
 while(col2.count()< Math.pow(10,4)){
 	col2.insert(generate_doc());
 }
-print("Shard col1 with hashed index on _id")
-db.col2.ensureIndex({"_id":"hashed"});
-printjson(sh.shardCollection("samples.col2", {_id:"hashed"}))
-enable_profiler(db,2,100);
-
-print("Run profiler data generation on col1")
-generate_someprofileentries(db)
-
-
