@@ -106,8 +106,6 @@ function range_queries(db,collection,count,useIndex,useSort){
 
 
 db=db.getMongo().getDB('samples');
-print("Enabled sharding on samples")
-printjson(db.adminCommand({ enableSharding : 'samples' }))
 col1 = db.getCollection('col1');
 col2 = db.getCollection('col2');
 

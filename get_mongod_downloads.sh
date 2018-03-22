@@ -19,14 +19,13 @@ else
 	if [ "$?" -eq 0 ]
 		then
 		wget -q --show-progress https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.6.3.tgz
-		wget -q --show-progress https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.2.4.tgz
 	else
 		wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.6.3.tgz                
 	fi
 
 	echo "Decompressing downloads"
 	gzip -d mongodb-linux-x86_64-3.6.3.tgz
-	tar xf mongodb-linux-x86_64-3.6.3.tar -C 3.0 --strip-components=1
+	tar xf mongodb-linux-x86_64-3.6.3.tar -C 3.6 --strip-components=1
  	
 	echo "Cleaning up compressed files"
 	rm mongodb-linux-x86_64-3.6.3.tar        
