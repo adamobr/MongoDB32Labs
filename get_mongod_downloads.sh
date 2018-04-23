@@ -3,7 +3,7 @@ uname -a | grep 'Darwin' 2>&1 >/dev/null
 if [ $? -eq 0  ]
 then 
 	echo "Downloading Binaries for OSX"
-	wget -q --show-progress https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-3.6.3.tgz 
+	curl https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-3.6.3.tgz -o mongodb-osx-ssl-x86_64-3.6.3.tgz
 	
 	echo -e "Decompressing downloads"
 	gzip -d mongodb-osx-ssl-x86_64-3.6.3.tgz
